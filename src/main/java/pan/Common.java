@@ -11,7 +11,13 @@ import io.openvidu.java.client.OpenVidu;
 
 public class Common extends AbstractModule
 {
+    private String openViduUri;
     private String openViduPassword;
+
+    public void setOpenViduUri(String openViduUri)
+    {
+        this.openViduUri = openViduUri;
+    }
 
     protected void setOpenViduPassword(String openViduPassword)
     {
@@ -52,6 +58,6 @@ public class Common extends AbstractModule
     @Singleton
     public OpenVidu provideOpenVidu()
     {
-        return new OpenVidu("http://localhost:4443", openViduPassword);
+        return new OpenVidu(openViduUri, openViduPassword);
     }
 }

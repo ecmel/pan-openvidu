@@ -14,6 +14,7 @@ public class Development extends Common
 
     public Development()
     {
+        setOpenViduUri("https://localhost:4443");
         setOpenViduPassword("MY_SECRET");
     }
 }
