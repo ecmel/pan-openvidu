@@ -5,3 +5,7 @@
 ## WSL 2
 
 Set-NetFirewallProfile -DisabledInterfaceAliases "vEthernet (WSL)"
+
+## Maven Wrapper
+
+mvn -N io.takari:maven:wrapper
